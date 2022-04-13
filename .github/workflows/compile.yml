@@ -18,9 +18,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install g++
     - name: Compile
-      run: g++ src/*.cpp -o brainfuck-interpreter -std=c++17
+      run: bash compile.sh
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: brainfuck-interpreter
-        path: ./brainfuck-interpreter
+        path: out/brainfuck-interpreter
