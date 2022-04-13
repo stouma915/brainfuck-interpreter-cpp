@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 
+#include "interpreter.h"
 #include "util.h"
 
 #define VERSION "1.0.0"
@@ -80,4 +81,8 @@ int main(int argc, char* argv[]) {
     source_file.close();
 
     string source = source_stream.str();
+
+    Memory memory;
+    string result = evaluate(source, memory);
+    cout << result << endl;
 }
