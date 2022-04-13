@@ -1,3 +1,6 @@
+#ifndef MEMORY_H
+#define MEMORY_H
+
 #include <unordered_map>
 
 class Memory {
@@ -13,3 +16,5 @@ class Memory {
         bool has_value();
         int  get_current_value();
 };
+
+#endif
