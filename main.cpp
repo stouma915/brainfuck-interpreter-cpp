@@ -1,4 +1,7 @@
+#include <filesystem>
+#include <fstream>
 #include <iostream>
+#include <sstream>
 
 #include "util.h"
 
@@ -18,6 +21,9 @@ void show_usage(std::string file_name) {
 }
 
 int main(int argc, char* argv[]) {
+    namespace fs = std::filesystem;
+
+    using namespace fs;
     using namespace std;
 
     if (argc < 2) {
@@ -54,4 +60,27 @@ int main(int argc, char* argv[]) {
             source_file_name = arg;
         }
     }
+
+    ifstream source_file;
+
+    source_file.open(source_file_name, ios::in);
+    if (source_file.fail()) {
+        cout << "Failed to open '" << source_file_name << "'." << endl;
+
+        return 1;
+    }
+
+    path source_file_path = path(source_file_name);
+    if (is_directory(source_file_path)) {
+        cout << "'" << source_file_name << "' is a directory." << endl;
+
+        return 1;
+    }
+
+    stringstream source_stream;
+    source_stream << source_file.rdbuf();
+
+    source_file.close();
+
+    string source = source_stream.str();
 }

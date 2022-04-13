@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "util.h"
 
 bool startsWith(std::string str, std::string prefix) {
