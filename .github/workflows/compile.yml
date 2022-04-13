@@ -16,7 +16,7 @@ jobs:
     - name: Install G++
       run: |
         sudo apt-get update
-        sudo apt-get install g++
+        sudo apt-get install g++=11.2.0
     - name: Compile
       run: g++ src/*.cpp -o brainfuck-interpreter
     - name: Upload artifact
