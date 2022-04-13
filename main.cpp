@@ -1,4 +1,57 @@
 #include <iostream>
 
-int main() {
+#include "util.h"
+
+#define VERSION "1.0.0"
+
+void show_usage(std::string file_name) {
+    std::cout << "Brainf**k Interpreter " << VERSION << "\n"
+                 "\n"
+                 "Usage:\n"
+                 "    " << file_name << " [FLAGS] [SOURCE]\n"
+                 "\n"
+                 "Flags:\n"
+                 "    -h, --help    Prints help information.\n"
+                 "\n"
+                 "Args:\n"
+                 "    <SOURCE> Brainfuck source file.\n";
+}
+
+int main(int argc, char* argv[]) {
+    using namespace std;
+
+    if (argc < 2) {
+        show_usage(argv[0]);
+
+        return 1;
+    }
+
+    string source_file_name;
+
+    for (int i = 1; i < argc; i++) {
+        string arg = argv[i];
+        
+        if (startsWith(arg, "-")) {
+            if (arg == "-h") {
+                show_usage(argv[0]);
+
+                return 0;
+            } else if (arg == "--help") {
+                show_usage(argv[0]);
+
+                return 0;
+            } else {
+                cout << "Found argument '" << arg << "' which wasn't expected, or isn't valid in this context.\n"
+                        "\n"
+                        "Usage:\n"
+                        "    " << argv[0] << " [FLAGS] [SOURCE]\n"
+                        "\n"
+                        "For more information try --help\n";
+
+                return 1;
+            }
+        } else {
+            source_file_name = arg;
+        }
+    }
 }
