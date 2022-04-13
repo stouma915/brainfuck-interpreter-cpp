@@ -21,9 +21,6 @@ void show_usage(std::string file_name) {
 }
 
 int main(int argc, char* argv[]) {
-    namespace fs = std::filesystem;
-
-    using namespace fs;
     using namespace std;
 
     if (argc < 2) {
@@ -70,8 +67,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    path source_file_path = path(source_file_name);
-    if (is_directory(source_file_path)) {
+    filesystem::path source_file_path = filesystem::path(source_file_name);
+    if (filesystem::is_directory(source_file_path)) {
         cout << "'" << source_file_name << "' is a directory." << endl;
 
         return 1;
