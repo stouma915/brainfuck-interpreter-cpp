@@ -25,7 +25,7 @@ std::string evaluate(std::string code, Memory memory) {
             result_stream << convert_ascii(memory.get_current_value());
         } else if (symbol == ',') {
             cout << "Input was requested." << endl;
-            
+
             bool done = false;
             int input = 0;
 
