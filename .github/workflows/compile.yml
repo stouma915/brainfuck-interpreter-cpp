@@ -18,7 +18,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install g++
     - name: Compile
-      run: bash compile.sh
+      run: chmod +x compile.sh && bash compile.sh
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
