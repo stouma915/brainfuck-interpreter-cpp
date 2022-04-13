@@ -83,6 +83,6 @@ int main(int argc, char* argv[]) {
     string source = source_stream.str();
 
     Memory memory;
-    string result = evaluate(source, memory);
+    auto [result, _] = evaluate(source, memory);
     cout << result << endl;
 }

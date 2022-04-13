@@ -1,5 +1,6 @@
 #include <iostream>
+#include <tuple>
 
 #include "memory.h"
 
-std::string evaluate(std::string code, Memory memory);
+std::tuple<std::string, Memory> evaluate(std::string code, Memory memory);
