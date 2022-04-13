@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
     string source_file_name;
 
-    for (int i = 1; i < argc; i++) {
+    for (int i = 1; i < argc; i ++) {
         string arg = argv[i];
         
         if (startsWith(arg, "-")) {
