@@ -10,6 +10,6 @@ class Memory {
         void increment_value();
         void decrement_value();
         void set_value(int new_value);
-        int  get_current_value();
         bool has_value();
+        int  get_current_value();
 };

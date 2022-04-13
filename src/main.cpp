@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
 
     for (int i = 1; i < argc; i ++) {
         string arg = argv[i];
-        
+
         if (startsWith(arg, "-")) {
             if (arg == "-h") {
                 show_usage(argv[0]);

@@ -42,10 +42,10 @@ void Memory::set_value(int new_value) {
     }
 }
 
-int Memory::get_current_value() {
-    return has_value() ? entries[pointer] : 0;
-}
-
 bool Memory::has_value() {
     return entries.find(pointer) != entries.end();
+}
+
+int Memory::get_current_value() {
+    return has_value() ? entries[pointer] : 0;
 }
