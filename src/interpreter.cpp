@@ -10,7 +10,7 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
 
     stringstream result_stream;
 
-    for (int i = 0; i < code.length(); i ++) {
+    for (unsigned int i = 0; i < code.length(); i ++) {
         int index = i;
         char symbol = code[i];
 
