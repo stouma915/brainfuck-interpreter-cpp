@@ -5,8 +5,13 @@
 
 class Memory {
     public:
-        int pointer = 0;
-        std::unordered_map<int, int> entries = {};
+        int pointer;
+        std::unordered_map<int, int> entries;
+
+        Memory() {
+            pointer = 0;
+            entries = {};
+        }
 
         void increment();
         void decrement();
