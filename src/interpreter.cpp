@@ -36,7 +36,7 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
                 string word;
                 cin >> word;
 
-                if (regex_match(word, regex("[+-]?[0-9]{1,}"))) {
+                if (regex_match(word, regex("[+-]?[0-9]{1,3}"))) {
                     long num = atol(word.c_str());
 
                     if (num >= -128 && num <= 127) {
