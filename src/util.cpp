@@ -4,24 +4,30 @@ bool startsWith(std::string str, std::string prefix) {
     return str.rfind(prefix, 0) == 0;
 }
 
-int search_loop_end(std::string before, std::string after) {
+int search_loop_end(std::string code, int start_index) {
+    if (code[start_index] != '[') {
+        return -1;
+    }
+
     int result = -1;
 
-    int count_of_bracket = 0;
-    int count_of_closing_bracket = 0;
+    std::string search_target = code.substr(start_index, code.length() - start_index);
 
-    for (int i = 0; i < after.length(); i ++) {
+    int a = 0;
+    int b = 0;
+
+    for (unsigned int i = 0; i < search_target.length(); i ++) {
         int index = i;
-        char symbol = after[i];
+        char symbol = search_target[index];
 
         if (symbol == '[') {
-            count_of_bracket ++;
+            a ++;
         } else if (symbol == ']') {
-            count_of_closing_bracket ++;
+            b ++;
         }
 
-        if (count_of_bracket == count_of_closing_bracket) {
-            result = index + before.length();
+        if (a == b) {
+            result = start_index + index;
             break;
         }
     }

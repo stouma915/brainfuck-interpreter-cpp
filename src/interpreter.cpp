@@ -54,10 +54,7 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
 
             memory.set_value(input);
         } else if (symbol == '[') {
-            string code_before_bracket = code.substr(0, index);
-            string code_after_bracket = code.substr(index, code.length());
-
-            int loop_end_index = search_loop_end(code_before_bracket, code_after_bracket);
+            int loop_end_index = search_loop_end(code, index);
             if (loop_end_index == -1) {
                 cout << "The end of the loop couldn't be identified." << endl;
                 exit(1);
