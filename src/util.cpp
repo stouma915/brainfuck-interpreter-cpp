@@ -50,3 +50,9 @@ int search_loop_end(std::string code, int start_index) {
 
     return result;
 }
+
+int to_single_bit_int(std::string str) {
+  long num = atol(str.c_str());
+
+  return (int) num;
+}
