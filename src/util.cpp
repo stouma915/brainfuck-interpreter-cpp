@@ -1,7 +1,23 @@
+#include <regex>
+
 #include "util.h"
 
 bool starts_with(std::string str, std::string prefix) {
     return str.rfind(prefix, 0) == 0;
+}
+
+bool is_single_bit_int(std::string str) {
+  return if (regex_match(str, regex("[+-]?[0-9]{1,3}"))) {
+           long num = atol(str.c_str());
+
+           if (num >= -128 && num <= 127) {
+             true
+           } else {
+             false
+           }
+         } else {
+           false
+         }
 }
 
 int search_loop_end(std::string code, int start_index) {
