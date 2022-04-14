@@ -31,8 +31,7 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
             int input = 0;
 
             while (!done) {
-                cout << endl;
-                cout << "Input> ";
+                cout << endl << "Input> ";
 
                 string word;
                 cin >> word;
