@@ -7,7 +7,7 @@ bool starts_with(std::string str, std::string prefix) {
 }
 
 bool is_single_bit_int(std::string str) {
-  if (regex_match(str, regex("[+-]?[0-9]{1,3}"))) {
+  if (regex_match(str, std::regex("[+-]?[0-9]{1,3}"))) {
     long num = atol(str.c_str());
 
     if (num >= -128 && num <= 127) {
