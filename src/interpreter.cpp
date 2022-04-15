@@ -36,10 +36,10 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
                 cin >> word;
 
                 if (is_single_bit_int(word)) {
-                  input = to_single_bit_int(word);
-                  break;
+                    input = to_single_bit_int(word);
+                    break;
                 } else {
-                  cout << "Please enter a 1 byte number." << endl;
+                    cout << "Please enter a 1 byte number." << endl;
                 }
             }
 
