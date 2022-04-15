@@ -7,17 +7,17 @@ bool starts_with(std::string str, std::string prefix) {
 }
 
 bool is_single_bit_int(std::string str) {
-  if (regex_match(str, std::regex("[+-]?[0-9]{1,3}"))) {
-    long num = atol(str.c_str());
+    if (regex_match(str, std::regex("[+-]?[0-9]{1,3}"))) {
+        long num = atol(str.c_str());
 
-    if (num >= -128 && num <= 127) {
-      return true;
+        if (num >= -128 && num <= 127) {
+            return true;
+        } else {
+            return false;
+        }
     } else {
-      return false;
+        return false;
     }
-  } else {
-    return false;
-  }
 }
 
 int search_loop_end(std::string code, int start_index) {
@@ -52,7 +52,7 @@ int search_loop_end(std::string code, int start_index) {
 }
 
 int to_single_bit_int(std::string str) {
-  long num = atol(str.c_str());
+    long num = atol(str.c_str());
 
-  return (int) num;
+    return (int) num;
 }
