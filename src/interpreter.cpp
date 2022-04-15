@@ -27,27 +27,19 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
         } else if (symbol == ',') {
             cout << "Input was requested." << endl;
 
-            bool done = false;
             int input = 0;
 
-            while (!done) {
+            while (true) {
                 cout << endl << "Input> ";
 
                 string word;
                 cin >> word;
 
-                if (regex_match(word, regex("[+-]?[0-9]{1,3}"))) {
-                    long num = atol(word.c_str());
-
-                    if (num >= -128 && num <= 127) {
-                        input = (int) num;
-                        done = true;
-                        break;
-                    } else {
-                        cout << "Please enter a 1 byte number." << endl;
-                    }
+                if (is_single_bit_int(word)) {
+                  input = to_single_bit_int(word);
+                  break;
                 } else {
-                    cout << "Please enter a 1 byte number." << endl;
+                  cout << "Please enter a 1 byte number." << endl;
                 }
             }
 
