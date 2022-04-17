@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "src/interpreter.h"
+#include <interpreter.h>
 
 int main() {
 }
