@@ -1,6 +1,3 @@
-#ifndef ASCII_CONVERTER_H
-#define ASCII_CONVERTER_H
+#pragma once
 
 char convert_ascii(int num);
-
-#endif
