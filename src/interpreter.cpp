@@ -25,8 +25,6 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
         } else if (symbol == '.') {
             result_stream << convert_ascii(memory.get_current_value());
         } else if (symbol == ',') {
-            cout << "Input was requested." << endl;
-
             int input = 0;
 
             while (true) {
