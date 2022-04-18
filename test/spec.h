@@ -14,4 +14,5 @@ class Spec {
         }
 };
 
+template <typename A>
 Spec<A> create_spec(std::string name, A expect);
