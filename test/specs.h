@@ -5,7 +5,7 @@
 
 class Specs {
     public:
-        typedef bool(*Func)(bool);
+        typedef bool(*Func)();
 
         std::string name;
         Func program;
