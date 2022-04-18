@@ -16,4 +16,11 @@ class Specs {
         }
 
         bool run();
+
+        static Specs create_test(std::string _name, Func _program) {
+            return Specs(
+                _name,
+                _program
+            );
+        }
 };
