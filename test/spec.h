@@ -21,12 +21,11 @@ class Spec {
             cout << "--- " << name << " should " << should << " ---" << endl;
 
             if (x == expect) {
-                cout << "OK." << endl;
+                cout << "OK: The result was as expected." << endl;
 
                 return true;
             } else {
-                cout << "Expected '" << expect << "', but the result was '" << x << "'." << endl;
-                cout << "Fail." << endl;
+                cout << "NG: Expected '" << expect << "', but the result was '" << x << "'." << endl;
 
                 return false;
             }
