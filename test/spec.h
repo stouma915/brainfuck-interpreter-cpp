@@ -14,4 +14,4 @@ class Spec {
         }
 };
 
-Spec create_spec(std::string name, A expect);
+Spec<A> create_spec(std::string name, A expect);
