@@ -12,6 +12,8 @@ class Spec {
             name = _name;
             expect = _expect;
         }
+
+        bool test(A x);
 };
 
 template <typename A>
