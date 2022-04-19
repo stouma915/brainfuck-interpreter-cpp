@@ -1,4 +1,4 @@
-name: Compile
+name: Test and Compile
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test_and_compile:
 
     runs-on: ubuntu-latest
 
@@ -17,6 +17,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install g++
+    - name: Test
+      run: chmod +x test.sh && bash test.sh
     - name: Compile
       run: chmod +x compile.sh && bash compile.sh
     - name: Upload artifact
