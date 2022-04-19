@@ -22,7 +22,7 @@ class Test {
             failure = 0;
         }
 
-        bool run();
+        std::tuple<int, int> run();
 
         static Test create_test(std::string _name, std::vector<Func> _spec_vec) {
             return Test(
