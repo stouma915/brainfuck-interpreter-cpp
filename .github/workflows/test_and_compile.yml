@@ -2,9 +2,9 @@ name: Test and Compile
 
 on:
   push:
-    branches: [ main, test ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, test ]
+    branches: [ main ]
 
 jobs:
   test_and_compile:
