@@ -3,7 +3,7 @@
 std::tuple<int, int> Test::run() {
     std::cout << "Start testing '" << name << "'." << std::endl;
 
-    for (int i = 0; i < spec_vec.size(); i ++) {
+    for (unsigned int i = 0; i < spec_vec.size(); i ++) {
         if (spec_vec[i]()) {
             success ++;
         } else {
