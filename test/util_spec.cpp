@@ -10,7 +10,7 @@ Test util_spec() {
                 return Spec<bool>::create_spec(
                            "bool starts_with(string, string)",
                            "return true if str starts with prefix",
-                           true
+                           false
                        ).test(starts_with("AABBCC", "AA"));
             }
         }
