@@ -1,7 +1,5 @@
-#include "specs.h"
+#include "test.h"
 
-bool Specs::run() {
+bool Test::run() {
     std::cout << "Start testing '" << name << "'." << std::endl;
-
-    return program();
 }
