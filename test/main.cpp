@@ -4,9 +4,11 @@
 #include "test.h"
 
 #include "ascii_converter_spec.h"
+#include "util_spec.h"
 
 const std::vector<Test> tests = {
-    ascii_converter_spec()
+    ascii_converter_spec(),
+    util_spec()
 };
 
 int main() {
