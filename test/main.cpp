@@ -5,12 +5,12 @@
 
 #include "ascii_converter_spec.h"
 
+const std::vector<Test> tests = {
+    ascii_converter_spec()
+};
+
 int main() {
     using namespace std;
-
-    vector<Test> tests = {
-        ascii_converter_spec()
-    };
 
     int success = 0;
     int failure = 0;
