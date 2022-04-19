@@ -4,7 +4,7 @@ Test ascii_converter_spec() {
     return Test::create_test(
         "ascii_converter.cpp",
         [
-            []() -> bool {
+            () -> bool {
                 return Spec<char>::create_spec(
                            "convert_ascii",
                            "convert int to char",
