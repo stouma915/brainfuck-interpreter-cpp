@@ -6,7 +6,9 @@
 #include "ascii_converter_spec.h"
 
 int main() {
-    std::vector<Test> tests = {
+    using namespace std;
+
+    vector<Test> tests = {
         ascii_converter_spec()
     };
 
@@ -21,19 +23,19 @@ int main() {
         failure += f;
     }
 
-    std::cout << std::endl
-              << success
-              << " OK, "
-              << failure
-              << " Error"
-              << (failure > 1 ? "s" : "")
-              << "."
-              << std::endl;
+    cout << endl
+         << success
+         << " OK, "
+         << failure
+         << " Error"
+         << (failure > 1 ? "s" : "")
+         << "."
+         << endl;
 
     if (failure == 0) {
-        std::cout << "All tests passed." << std::endl;
+        cout << "All tests passed." << endl;
     } else {
-        std::cout << "Some tests have failed." << std::endl;
+        cout << "Some tests have failed." << endl;
 
         return 1;
     }
