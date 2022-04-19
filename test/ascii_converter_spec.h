@@ -3,6 +3,6 @@
 #include <ascii_converter.cpp>
 
 #include "spec.h"
-#include "specs.h"
+#include "test.h"
 
-Specs ascii_converter_spec();
+Test ascii_converter_spec();
