@@ -1,0 +1,16 @@
+#include "ascii_converter_spec.h"
+
+Test ascii_converter_spec() {
+    return Test::create_test(
+        "ascii_converter.cpp",
+        [
+            []() {
+                return Spec<char>::create_spec(
+                           "convert_ascii",
+                           "convert int to char",
+                           'A'
+                       ).test(convert_ascii(65));
+            }
+        ]
+    );
+}
