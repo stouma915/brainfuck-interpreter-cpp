@@ -2,25 +2,26 @@
 
 #include <iostream>
 #include <tuple>
+#include <vector>
 
 class Specs {
     public:
         typedef bool(*Func)();
 
         std::string name;
-        Func program;
+        std::vector<Func> spec_vec;
 
-        Specs(std::string _name, Func _program) {
+        Specs(std::string _name, std::vector<Func> _spec_vec) {
             name = _name;
-            program = _program;
+            spec_vec = _spec_vec;
         }
 
         bool run();
 
-        static Specs create_test(std::string _name, Func _program) {
+        static Specs create_test(std::string _name, std::vector<Func> _spec_vec) {
             return Specs(
                 _name,
-                _program
+                _spec_vec
             );
         }
 };
