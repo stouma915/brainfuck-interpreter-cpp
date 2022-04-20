@@ -31,8 +31,7 @@ int search_loop_end(std::string code, int start_index) {
     int b = 0;
 
     for (unsigned int i = start_index; i < code.length(); i ++) {
-        int index = i;
-        char symbol = code[index];
+        char symbol = code[i];
 
         if (symbol == '[') {
             a ++;
@@ -41,7 +40,7 @@ int search_loop_end(std::string code, int start_index) {
         }
 
         if (a == b) {
-            result = start_index + index;
+            result = i;
             break;
         }
     }
