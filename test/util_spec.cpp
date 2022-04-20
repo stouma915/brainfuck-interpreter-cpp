@@ -33,6 +33,13 @@ Test util_spec() {
                            "search loop end index and return",
                            20
                        ).test(search_loop_end("++++++[>++++++++++<-]>+++++.", 6));
+            },
+            []() -> bool {
+                return Spec<int>::create_spec(
+                           "int search_loop_end(string, int)",
+                           "-1 if start_index is invalid",
+                           -1
+                       ).test(search_loop_end("[]", 1));
             }
         }
     );
