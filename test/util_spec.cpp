@@ -40,6 +40,13 @@ Test util_spec() {
                            "-1 if start_index is invalid",
                            -1
                        ).test(search_loop_end("[]", 1));
+            },
+            []() -> bool {
+                return Spec<int>::create_spec(
+                           "int search_loop_end(string, int)",
+                           "-1 if not found",
+                           -1
+                       ).test(search_loop_end("[", 0));
             }
         }
     );
