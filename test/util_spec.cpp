@@ -68,6 +68,13 @@ Test util_spec() {
                     "-1 if not found",
                     -1
                 ).test(search_loop_end("[", 0));
+            },
+            []() -> bool {
+                return Spec<int>::create_spec(
+                    "int to_single_bit_int(string)",
+                    "convert int to string",
+                    32
+                ).test(to_single_bit_int("32"));
             }
         }
     );
