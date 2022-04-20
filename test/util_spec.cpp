@@ -21,6 +21,20 @@ Test util_spec() {
                 ).test(starts_with("AABBCC", "BB"));
             },
             []() -> bool {
+                return Spec<bool>::create_spec(
+                    "bool is_single_bit_int(string)",
+                    "true if str can be int",
+                    true
+                ).test(is_single_bit_int("256"));
+            },
+            []() -> bool {
+                return Spec<bool>::create_spec(
+                    "bool is_single_bit_int(string)",
+                    "false if str cannot be int",
+                    false
+                ).test(is_single_bit_int("aaa"));
+            },
+            []() -> bool {
                 return Spec<int>::create_spec(
                     "int search_loop_end(string, int)",
                     "search loop end index and return",
