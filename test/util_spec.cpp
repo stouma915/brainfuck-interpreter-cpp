@@ -25,7 +25,7 @@ Test util_spec() {
                     "bool is_single_bit_int(string)",
                     "true if str can be int",
                     true
-                ).test(is_single_bit_int("256"));
+                ).test(is_single_bit_int("32"));
             },
             []() -> bool {
                 return Spec<bool>::create_spec(
