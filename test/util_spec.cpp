@@ -23,9 +23,16 @@ Test util_spec() {
             []() -> bool {
                 return Spec<int>::create_spec(
                            "int search_loop_end(string, int)",
-                           "search loop end index 1",
+                           "search loop end index and return",
                            1
                        ).test(search_loop_end("[]", 0));
+            },
+            []() -> bool {
+                return Spec<int>::create_spec(
+                           "int search_loop_end(string, int)",
+                           "search loop end index and return",
+                           20
+                       ).test(search_loop_end("++++++[>++++++++++<-]>+++++.", 6));
             }
         }
     );
