@@ -4,10 +4,12 @@
 #include "test.h"
 
 #include "ascii_converter_spec.h"
+#include "interpreter_spec.h"
 #include "util_spec.h"
 
 const std::vector<Test> tests = {
     ascii_converter_spec(),
+    interpreter_spec(),
     util_spec()
 };
 
