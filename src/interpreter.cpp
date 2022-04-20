@@ -11,7 +11,6 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
     stringstream result_stream;
 
     for (unsigned int i = 0; i < code.length(); i ++) {
-        int index = i;
         char symbol = code[i];
 
         if (symbol == '+') {
@@ -43,13 +42,13 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
 
             memory.set_value(input);
         } else if (symbol == '[') {
-            int loop_end_index = search_loop_end(code, index);
+            int loop_end_index = search_loop_end(code, i);
             if (loop_end_index == -1) {
                 cout << "The end of the loop couldn't be identified." << endl;
                 exit(1);
             }
 
-            string loop_code = code.substr(index + 1, loop_end_index - (index + 1));
+            string loop_code = code.substr(i + 1, loop_end_index - (i + 1));
             string after_loop = code.substr(loop_end_index, code.length() - loop_end_index);
 
             while (memory.get_current_value() != 0) {
