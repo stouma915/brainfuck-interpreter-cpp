@@ -37,6 +37,13 @@ Test util_spec() {
             []() -> bool {
                 return Spec<int>::create_spec(
                            "int search_loop_end(string, int)",
+                           "search loop end index and return",
+                           5
+                       ).test(search_loop_end("[[[]]]", 0));
+            },
+            []() -> bool {
+                return Spec<int>::create_spec(
+                           "int search_loop_end(string, int)",
                            "-1 if start_index is invalid",
                            -1
                        ).test(search_loop_end("[]", 1));
