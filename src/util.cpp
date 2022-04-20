@@ -27,14 +27,12 @@ int search_loop_end(std::string code, int start_index) {
 
     int result = -1;
 
-    std::string search_target = code.substr(start_index, code.length() - start_index);
-
     int a = 0;
     int b = 0;
 
-    for (unsigned int i = 0; i < search_target.length(); i ++) {
+    for (unsigned int i = start_index; i < code.length(); i ++) {
         int index = i;
-        char symbol = search_target[index];
+        char symbol = code[index];
 
         if (symbol == '[') {
             a ++;
