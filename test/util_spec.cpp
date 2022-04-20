@@ -19,6 +19,13 @@ Test util_spec() {
                            "false if str doesn't start with prefix",
                            false
                        ).test(starts_with("AABBCC", "BB"));
+            },
+            []() -> bool {
+                return Spec<int>::create_spec(
+                           "int search_loop_end(string, int)",
+                           "search loop end index 1",
+                           1
+                       ).test(search_loop_end("[]", 0));
             }
         }
     );
