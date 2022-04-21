@@ -22,7 +22,7 @@ void Memory::increment_value() {
 }
 
 void Memory::decrement_value() {
-    int new_value = entries[pointer] - 1;
+    int new_value = (has_value() ? entries[pointer] : 256) - 1;
     if (new_value <= -1) {
         entries[pointer] = 255;
     } else {
@@ -40,6 +40,10 @@ void Memory::set_value(int new_value) {
             increment_value();
         }
     }
+}
+
+bool Memory::has_value() {
+    return entries.find(pointer) != entries.end();
 }
 
 unsigned int Memory::get_current_value() {
