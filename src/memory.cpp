@@ -22,11 +22,11 @@ void Memory::increment_value() {
 }
 
 void Memory::decrement_value() {
-    int new_value = (has_value() ? entries[pointer] : 256) - 1;
-    if (new_value <= -1) {
+    unsigned int current = entries[pointer];
+    if (current == 0) {
         entries[pointer] = 255;
     } else {
-        entries[pointer] = new_value;
+        entries[pointer] = current - 1;
     }
 }
 
