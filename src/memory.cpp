@@ -13,7 +13,7 @@ void Memory::decrement() {
 }
 
 void Memory::increment_value() {
-    int new_value = (has_value() ? entries[pointer] : 0) + 1;
+    unsigned int new_value = entries[pointer] + 1;
     if (new_value >= 256) {
         entries[pointer] = 0;
     } else {
