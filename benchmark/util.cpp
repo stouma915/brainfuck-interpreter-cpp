@@ -1,8 +1,8 @@
+#include "util.h"
+
 #include <algorithm>
 #include <chrono>
 #include <iostream>
-
-#include "util.h"
 
 long current_epoch_milli() {
     using namespace std::chrono;

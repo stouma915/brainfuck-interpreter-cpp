@@ -1,9 +1,9 @@
+#include "interpreter_spec.h"
+
 #include <iostream>
 
 #include <interpreter.cpp>
 #include <memory.cpp>
-
-#include "interpreter_spec.h"
 
 Test interpreter_spec() {
     return Test::create_test(

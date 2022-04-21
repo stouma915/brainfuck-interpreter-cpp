@@ -1,6 +1,6 @@
-#include <regex>
-
 #include "util.h"
+
+#include <regex>
 
 bool starts_with(std::string str, std::string prefix) {
     return str.rfind(prefix, 0) == 0;

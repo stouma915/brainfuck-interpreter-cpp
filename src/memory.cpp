@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "memory.h"
+
+#include <iostream>
 
 void Memory::increment() {
     pointer ++;

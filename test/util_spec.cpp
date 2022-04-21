@@ -1,6 +1,6 @@
-#include <util.cpp>
-
 #include "util_spec.h"
+
+#include <util.cpp>
 
 Test util_spec() {
     return Test::create_test(

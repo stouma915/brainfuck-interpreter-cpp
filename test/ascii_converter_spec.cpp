@@ -1,6 +1,6 @@
-#include <ascii_converter.cpp>
-
 #include "ascii_converter_spec.h"
+
+#include <ascii_converter.cpp>
 
 Test ascii_converter_spec() {
     return Test::create_test(
