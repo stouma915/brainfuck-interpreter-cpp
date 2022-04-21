@@ -24,7 +24,7 @@ std::vector<long> benchmark(std::string code, int num_of_exec) {
 }
 
 void show_running_message(std::string weight, int num_of_exec) {
-    std::cout << "Running " << weight << "benchmark("
+    std::cout << "Running " << weight << " benchmark("
               << num_of_exec
               << " time"
               << (num_of_exec > 1 ? "s" : "")
