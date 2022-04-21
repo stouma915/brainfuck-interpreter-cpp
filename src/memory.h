@@ -5,7 +5,7 @@
 class Memory {
     public:
         unsigned int pointer;
-        std::unordered_map<unsigned int, int> entries;
+        std::unordered_map<unsigned int, unsigned int> entries;
 
         Memory() {
             pointer = 0;
