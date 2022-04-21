@@ -4,8 +4,8 @@
 
 class Memory {
     public:
-        unsigned int pointer;
-        std::unordered_map<unsigned int, unsigned int> entries;
+        int pointer;
+        std::unordered_map<int, int> entries;
 
         Memory() {
             pointer = 0;
