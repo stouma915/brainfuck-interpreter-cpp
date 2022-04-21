@@ -47,5 +47,5 @@ bool Memory::has_value() {
 }
 
 int Memory::get_current_value() {
-    return has_value() ? entries[pointer] : 0;
+    return entries[pointer];
 }
