@@ -1,0 +1,48 @@
+#include <iostream>
+#include <vector>
+
+#include "bench_codes.h"
+#include "benchmark.h"
+
+#define NUM_OF_EXEC_LIGHTWEIGHT 100
+#define NUM_OF_EXEC_MEDIUM_WEIGHT 50
+#define NUM_OF_EXEC_HEAVYWEIGHT 25
+
+int main() {
+    using namespace std;
+
+    show_running_message("lightweight", NUM_OF_EXEC_LIGHTWEIGHT);
+
+    vector<long> lightweight_times = benchmark(
+        lightweight(),
+        NUM_OF_EXEC_LIGHTWEIGHT
+    );
+
+    show_max_min_average(lightweight_times);
+
+    cout << endl;
+
+    show_running_message("medium weight", NUM_OF_EXEC_MEDIUM_WEIGHT);
+
+    vector<long> medium_weight_times = benchmark(
+        medium_weight(),
+        NUM_OF_EXEC_MEDIUM_WEIGHT
+    );
+
+    show_max_min_average(medium_weight_times);
+
+    cout << endl;
+
+    show_running_message("heavyweight", NUM_OF_EXEC_HEAVYWEIGHT);
+
+    vector<long> heavyweight_times = benchmark(
+        heavyweight(),
+        NUM_OF_EXEC_HEAVYWEIGHT
+    );
+
+    show_max_min_average(heavyweight_times);
+
+    cout << endl;
+
+    cout << "Benchmark finished." << endl;
+}
