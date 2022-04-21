@@ -46,6 +46,6 @@ bool Memory::has_value() {
     return entries.find(pointer) != entries.end();
 }
 
-int Memory::get_current_value() {
+unsigned int Memory::get_current_value() {
     return entries[pointer];
 }
