@@ -26,7 +26,7 @@ void Memory::decrement_value() {
     if (new_value <= -1) {
         entries[pointer] = 255;
     } else {
-        entries[pointer] = new_value
+        entries[pointer] = new_value;
     }
 }
 
