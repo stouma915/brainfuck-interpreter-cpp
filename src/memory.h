@@ -5,7 +5,7 @@
 class Memory {
     public:
         unsigned int pointer;
-        std::unordered_map<unsigned int, int> entries;
+        std::unordered_map<unsigned int, unsigned int> entries;
 
         Memory() {
             pointer = 0;
@@ -18,5 +18,5 @@ class Memory {
         void decrement_value();
         void set_value(int new_value);
         bool has_value();
-        int  get_current_value();
+        unsigned int get_current_value();
 };
