@@ -17,6 +17,5 @@ class Memory {
         void increment_value();
         void decrement_value();
         void set_value(int new_value);
-        bool has_value();
         unsigned int get_current_value();
 };
