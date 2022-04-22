@@ -6,12 +6,15 @@
 #include "ascii_converter.h"
 #include "util.h"
 
-std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
+std::tuple<std::string, Memory> evaluate(std::string code,
+                                         Memory memory,
+                                         int start_index = 0
+) {
     using namespace std;
 
     stringstream result_stream;
 
-    for (unsigned int i = 0; i < code.length(); i ++) {
+    for (unsigned int i = start_index; i < code.length(); i ++) {
         char symbol = code[i];
 
         if (symbol == '+') {
