@@ -22,7 +22,7 @@ Test interpreter_spec() {
                     "evaluate Brainf**k code",
                     "ABCD"
                 ).test(std::get<0>(evaluate("----[---->+<]>++.+.+.+.", Memory(), 0)));
-            }, thanks 
+            },
             []() -> bool {
                 return Spec<std::string>::create_spec(
                     "tuple<string, Memory> evaluate(string, Memory)",
