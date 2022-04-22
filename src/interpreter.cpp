@@ -8,7 +8,7 @@
 
 std::tuple<std::string, Memory> evaluate(std::string code,
                                          Memory memory,
-                                         int start_index = 0
+                                         int start_index
 ) {
     using namespace std;
 
@@ -56,12 +56,12 @@ std::tuple<std::string, Memory> evaluate(std::string code,
             string after_loop = code.substr(loop_end_index, code.length() - loop_end_index);
 
             while (memory.get_current_value() != 0) {
-                auto [result, mem] = evaluate(loop_code, memory);
+                auto [result, mem] = evaluate(loop_code, memory, 0);
                 result_stream << result;
                 memory = mem;
             }
 
-            auto [result, mem] = evaluate(after_loop, memory);
+            auto [result, mem] = evaluate(after_loop, memory, 0);
             result_stream << result;
             memory = mem;
 
