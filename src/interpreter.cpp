@@ -53,7 +53,6 @@ std::tuple<std::string, Memory> evaluate(std::string code,
             }
 
             string loop_code = code.substr(i + 1, loop_end_index - (i + 1));
-            string after_loop = code.substr(loop_end_index, code.length() - loop_end_index);
 
             while (memory.get_current_value() != 0) {
                 auto [result, mem] = evaluate(loop_code, memory, 0);
@@ -61,7 +60,7 @@ std::tuple<std::string, Memory> evaluate(std::string code,
                 memory = mem;
             }
 
-            auto [result, mem] = evaluate(after_loop, memory, 0);
+            auto [result, mem] = evaluate(code, memory, loop_end_index);
             result_stream << result;
             memory = mem;
 
