@@ -7,5 +7,5 @@
 
 std::tuple<std::string, Memory> evaluate(std::string code,
                                          Memory memory,
-                                         int start_index = 0
+                                         int start_index
 );
