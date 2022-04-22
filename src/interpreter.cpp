@@ -50,8 +50,7 @@ std::tuple<std::string, Memory> evaluate(std::string code, Memory memory) {
             }
 
             string loop_code = code.substr(i + 1, loop_end_index - (i + 1));
-            string after_loop = code;
-            after_loop.erase(loop_end_index, 0);
+            string after_loop = code.substr(loop_end_index, code.length() - loop_end_index);
 
             while (memory.get_current_value() != 0) {
                 auto [result, mem] = evaluate(loop_code, memory);
