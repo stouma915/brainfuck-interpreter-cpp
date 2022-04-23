@@ -13,21 +13,11 @@ void Memory::decrement() {
 }
 
 void Memory::increment_value() {
-    unsigned int new_value = entries[pointer] + 1;
-    if (new_value >= 256) {
-        entries[pointer] = 0;
-    } else {
-        entries[pointer] = new_value;
-    }
+    entries[pointer] ++;
 }
 
 void Memory::decrement_value() {
-    int new_value = (has_value() ? entries[pointer] : 256) - 1;
-    if (new_value <= -1) {
-        entries[pointer] = 255;
-    } else {
-        entries[pointer] = new_value;
-    }
+    entries[pointer] --;
 }
 
 void Memory::set_value(int new_value) {
@@ -42,10 +32,6 @@ void Memory::set_value(int new_value) {
     }
 }
 
-bool Memory::has_value() {
-    return entries.find(pointer) != entries.end();
-}
-
-unsigned int Memory::get_current_value() {
+unsigned char Memory::get_current_value() {
     return entries[pointer];
 }
