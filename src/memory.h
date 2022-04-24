@@ -7,11 +7,9 @@ class Memory {
         unsigned int pointer;
         std::unordered_map<unsigned int, unsigned char> entries;
 
-        Memory(int _pointer = 0,
-               std::unordered_map<unsigned int, unsigned char> _entries = {}
-        ) {
-            pointer = _pointer;
-            entries = _entries;
+        Memory() {
+            pointer = 0;
+            entries = {};
         }
 
         void increment();
