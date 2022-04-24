@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+
 out/
 bench_out/
 test_out/
