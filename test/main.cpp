@@ -20,7 +20,9 @@ int main() {
     int failure = 0;
 
     for (unsigned int i = 0; i < tests.size(); i ++) {
-        auto [s, f] = tests[i].run();
+        Test test = tests[i];
+
+        auto [s, f] = test.run();
         success += s;
         failure += f;
     }
