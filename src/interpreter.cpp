@@ -6,9 +6,10 @@
 #include "ascii_converter.h"
 #include "util.h"
 
-std::tuple<std::string, Memory> evaluate(std::string code,
-                                         Memory memory,
-                                         int start_index
+std::tuple<std::string, Memory> evaluate(
+    std::string code,
+    Memory memory,
+    int start_index
 ) {
     using namespace std;
 
