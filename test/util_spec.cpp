@@ -22,17 +22,17 @@ Test util_spec() {
             },
             []() -> bool {
                 return Spec<bool>::create_spec(
-                    "bool is_single_bit_int(string)",
+                    "bool is_int(string)",
                     "true if str can be int",
                     true
-                ).test(is_single_bit_int("32"));
+                ).test(is_int("32"));
             },
             []() -> bool {
                 return Spec<bool>::create_spec(
-                    "bool is_single_bit_int(string)",
+                    "bool is_int(string)",
                     "false if str cannot be int",
                     false
-                ).test(is_single_bit_int("aaa"));
+                ).test(is_int("aaa"));
             },
             []() -> bool {
                 return Spec<int>::create_spec(
