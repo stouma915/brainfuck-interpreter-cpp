@@ -71,10 +71,10 @@ Test util_spec() {
             },
             []() -> bool {
                 return Spec<int>::create_spec(
-                    "int to_single_bit_int(string)",
+                    "int to_int(string)",
                     "convert string to int",
                     32
-                ).test(to_single_bit_int("32"));
+                ).test(to_int("32"));
             }
         }
     );
