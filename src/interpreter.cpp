@@ -37,8 +37,8 @@ std::tuple<std::string, Memory> evaluate(
                 string word;
                 cin >> word;
 
-                if (is_single_bit_int(word)) {
-                    input = to_single_bit_int(word);
+                if (is_int(word)) {
+                    input = to_int(word);
                     break;
                 } else {
                     cout << "Please enter a number." << endl;
