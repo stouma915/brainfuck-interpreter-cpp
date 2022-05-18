@@ -41,7 +41,7 @@ std::tuple<std::string, Memory> evaluate(
                     input = to_single_bit_int(word);
                     break;
                 } else {
-                    cout << "Please enter a 1 byte number." << endl;
+                    cout << "Please enter a number." << endl;
                 }
             }
 
