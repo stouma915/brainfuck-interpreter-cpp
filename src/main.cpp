@@ -77,7 +77,6 @@ int main(int argc, char* argv[]) {
 
     stringstream source_stream;
     source_stream << source_file.rdbuf();
-
     source_file.close();
 
     string source = source_stream.str();
