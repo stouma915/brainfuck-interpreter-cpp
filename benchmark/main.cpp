@@ -14,7 +14,7 @@ int main() {
     show_running_message("lightweight", NUM_OF_EXEC_LIGHTWEIGHT);
 
     vector<long> lightweight_times = benchmark(
-        lightweight(),
+        lightweight_code(),
         NUM_OF_EXEC_LIGHTWEIGHT
     );
 
@@ -25,7 +25,7 @@ int main() {
     show_running_message("medium weight", NUM_OF_EXEC_MEDIUM_WEIGHT);
 
     vector<long> medium_weight_times = benchmark(
-        medium_weight(),
+        medium_weight_code(),
         NUM_OF_EXEC_MEDIUM_WEIGHT
     );
 
@@ -36,7 +36,7 @@ int main() {
     show_running_message("heavyweight", NUM_OF_EXEC_HEAVYWEIGHT);
 
     vector<long> heavyweight_times = benchmark(
-        heavyweight(),
+        heavyweight_code(),
         NUM_OF_EXEC_HEAVYWEIGHT
     );
 
