@@ -2,6 +2,6 @@
 
 #include <iostream>
 
-std::string lightweight();
-std::string medium_weight();
-std::string heavyweight();
+std::string lightweight_code();
+std::string medium_weight_code();
+std::string heavyweight_code();
