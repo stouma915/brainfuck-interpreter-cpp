@@ -60,7 +60,6 @@ int main(int argc, char* argv[]) {
     }
 
     ifstream source_file;
-
     source_file.open(source_file_name, ios::in);
     if (source_file.fail()) {
         cout << "Failed to open '" << source_file_name << "'." << endl;
