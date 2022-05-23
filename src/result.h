@@ -13,13 +13,4 @@ class Result {
             output = _output;
             memory = _memory;
         }
-
-        std::string get_output() {
-            return output;
-        }
-
-        Memory get_memory() {
-            return memory;
-        }
-
 };
