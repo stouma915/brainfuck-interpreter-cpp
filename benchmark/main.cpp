@@ -49,6 +49,6 @@ int main() {
                    sum(medium_weight_times) +
                    sum(heavyweight_times);
 
-    cout << "Elapsed: " << elapsed << "ms.";
+    cout << "Elapsed: " << elapsed << "ms." << endl;
     cout << "Benchmark finished." << endl;
 }
