@@ -6,11 +6,7 @@
 #include "ascii_converter.h"
 #include "util.h"
 
-std::tuple<std::string, Memory> evaluate(
-    std::string code,
-    Memory memory,
-    int start_index
-) {
+Result evaluate(std::string code, Memory memory, int start_index) {
     using namespace std;
 
     stringstream result_stream;
@@ -56,18 +52,18 @@ std::tuple<std::string, Memory> evaluate(
             string loop_code = code.substr(i + 1, loop_end_index - (i + 1));
 
             while (memory.get_current_value() != 0) {
-                auto [result, mem] = evaluate(loop_code, memory, 0);
-                result_stream << result;
-                memory = mem;
+                Result result = evaluate(loop_code, memory, 0);
+                result_stream << result.get_output();
+                memory = result.get_memory();
             }
 
-            auto [result, mem] = evaluate(code, memory, loop_end_index);
-            result_stream << result;
-            memory = mem;
+            Result result = evaluate(code, memory, loop_end_index);
+            result_stream << result.get_output();
+            memory = result.get_memory();
 
             break;
         }
     }
 
-    return { result_stream.str(), memory };
+    return create_result(result_stream.str(), memory);
 }
