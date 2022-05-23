@@ -65,5 +65,5 @@ Result evaluate(std::string code, Memory memory, int start_index) {
         }
     }
 
-    return Result::create_result(result_stream.str(), memory);
+    return Result(result_stream.str(), memory);
 }
