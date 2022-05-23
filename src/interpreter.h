@@ -1,11 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <tuple>
 
 #include "memory.h"
+#include "result.h"
 
-std::tuple<std::string, Memory> evaluate(std::string code,
-                                         Memory memory,
-                                         int start_index
-);
+Result evaluate(std::string code, Memory memory, int start_index);
