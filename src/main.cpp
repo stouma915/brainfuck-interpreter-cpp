@@ -81,5 +81,5 @@ int main(int argc, char* argv[]) {
     string source = source_stream.str();
 
     Result result = evaluate(source, Memory(), 0);
-    cout << result.get_output() << endl;
+    cout << result.output << endl;
 }
