@@ -14,6 +14,16 @@ long current_epoch_milli() {
     return milli.count();
 }
 
+long sum(std::vector<long> vec) {
+    long s = 0;
+
+    for (unsigned int i = 0; i < vec.size(); i ++) {
+        s += vec[i];
+    }
+
+    return s;
+}
+
 long max(std::vector<long> vec) {
     std::sort(vec.begin(), vec.end());
 
@@ -27,11 +37,5 @@ long min(std::vector<long> vec) {
 }
 
 long average(std::vector<long> vec) {
-    long sum = 0;
-
-    for (unsigned int i = 0; i < vec.size(); i ++) {
-        sum += vec[i];
-    }
-
-    return sum / vec.size();
+    return sum(vec) / vec.size();
 }
