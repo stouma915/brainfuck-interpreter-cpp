@@ -53,13 +53,13 @@ Result evaluate(std::string code, Memory memory, int start_index) {
 
             while (memory.get_current_value() != 0) {
                 Result result = evaluate(loop_code, memory, 0);
-                result_stream << result.get_output();
-                memory = result.get_memory();
+                result_stream << result.output;
+                memory = result.memory;
             }
 
             Result result = evaluate(code, memory, loop_end_index);
-            result_stream << result.get_output();
-            memory = result.get_memory();
+            result_stream << result.output;
+            memory = result.memory;
 
             break;
         }
