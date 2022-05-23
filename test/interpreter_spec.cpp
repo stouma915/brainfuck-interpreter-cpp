@@ -11,24 +11,24 @@ Test interpreter_spec() {
         {
             []() -> bool {
                 return Spec<std::string>::create_spec(
-                    "tuple<string, Memory> evaluate(string, Memory)",
+                    "Result evaluate(string, Memory, int)",
                     "evaluate Brainf**k code",
                     "A"
-                ).test(std::get<0>(evaluate("----[---->+<]>++.", Memory(), 0)));
+                ).test(evaluate("----[---->+<]>++.", Memory(), 0).get_output());
             },
             []() -> bool {
                 return Spec<std::string>::create_spec(
-                    "tuple<string, Memory> evaluate(string, Memory)",
+                    "Result evaluate(string, Memory, int)",
                     "evaluate Brainf**k code",
                     "ABCD"
-                ).test(std::get<0>(evaluate("----[---->+<]>++.+.+.+.", Memory(), 0)));
+                ).test(evaluate("----[---->+<]>++.+.+.+.", Memory(), 0).get_output());
             },
             []() -> bool {
                 return Spec<std::string>::create_spec(
-                    "tuple<string, Memory> evaluate(string, Memory)",
+                    "Result evaluate(string, Memory, int)",
                     "evaluate Brainf**k code",
                     "!@#$"
-                ).test(std::get<0>(evaluate("++++[->++++++++<]>+.-[->++<]>.[-->+<]>+++.+.", Memory(), 0)));
+                ).test(evaluate("++++[->++++++++<]>+.-[->++<]>.[-->+<]>+++.+.", Memory(), 0).get_output());
             }
         }
     );
