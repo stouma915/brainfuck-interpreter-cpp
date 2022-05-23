@@ -11,36 +11,36 @@
 int main() {
     using namespace std;
 
-    show_running_message("lightweight", NUM_OF_EXEC_LIGHTWEIGHT);
+    show_start_message("lightweight", NUM_OF_EXEC_LIGHTWEIGHT);
 
     vector<long> lightweight_times = benchmark(
         lightweight_code(),
         NUM_OF_EXEC_LIGHTWEIGHT
     );
 
-    show_max_min_average(lightweight_times);
+    show_result(lightweight_times);
 
     cout << endl;
 
-    show_running_message("medium weight", NUM_OF_EXEC_MEDIUM_WEIGHT);
+    show_start_message("medium weight", NUM_OF_EXEC_MEDIUM_WEIGHT);
 
     vector<long> medium_weight_times = benchmark(
         medium_weight_code(),
         NUM_OF_EXEC_MEDIUM_WEIGHT
     );
 
-    show_max_min_average(medium_weight_times);
+    show_result(medium_weight_times);
 
     cout << endl;
 
-    show_running_message("heavyweight", NUM_OF_EXEC_HEAVYWEIGHT);
+    show_start_message("heavyweight", NUM_OF_EXEC_HEAVYWEIGHT);
 
     vector<long> heavyweight_times = benchmark(
         heavyweight_code(),
         NUM_OF_EXEC_HEAVYWEIGHT
     );
 
-    show_max_min_average(heavyweight_times);
+    show_result(heavyweight_times);
 
     cout << endl;
 
