@@ -22,10 +22,4 @@ class Result {
             return memory;
         }
 
-        static Result create_result(std::string _output, Memory _memory) {
-            return Result(
-                _output,
-                _memory
-            );
-        }
 };
