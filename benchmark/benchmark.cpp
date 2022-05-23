@@ -23,8 +23,8 @@ std::vector<long> benchmark(std::string code, int num_of_exec) {
     return times;
 }
 
-void show_running_message(std::string weight, int num_of_exec) {
-    std::cout << "Running " << weight << " benchmark("
+void show_start_message(std::string weight, int num_of_exec) {
+    std::cout << "Starting " << weight << " benchmark("
               << num_of_exec
               << " time"
               << (num_of_exec > 1 ? "s" : "")
@@ -32,7 +32,7 @@ void show_running_message(std::string weight, int num_of_exec) {
               << std::endl;
 }
 
-void show_max_min_average(std::vector<long> vec) {
+void show_result(std::vector<long> vec) {
     long max_time = max(vec);
     long min_time = min(vec);
     long average_time = average(vec);
