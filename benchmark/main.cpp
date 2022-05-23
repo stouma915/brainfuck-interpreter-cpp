@@ -3,6 +3,7 @@
 
 #include "bench_codes.h"
 #include "benchmark.h"
+#include "util.h"
 
 #define NUM_OF_EXEC_LIGHTWEIGHT 100
 #define NUM_OF_EXEC_MEDIUM_WEIGHT 50
@@ -44,5 +45,10 @@ int main() {
 
     cout << endl;
 
+    long elapsed = sum(lightweight_times) +
+                   sum(medium_weight_times) +
+                   sum(heavyweight_times);
+
+    cout << "Elapsed: " << elapsed << "ms.";
     cout << "Benchmark finished." << endl;
 }
