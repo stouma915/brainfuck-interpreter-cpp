@@ -6,7 +6,7 @@
 #include "interpreter.h"
 #include "util.h"
 
-#define VERSION "1.0.3"
+#define VERSION "1.0.4"
 
 void show_usage(std::string file_name) {
     std::cout << "Brainf**k Interpreter " << VERSION << "\n"
