@@ -5,6 +5,8 @@
 #include <interpreter.cpp>
 #include <memory.cpp>
 
+#include "spec.h"
+
 Test interpreter_spec() {
     return Test::create_test(
         "interpreter.cpp",
