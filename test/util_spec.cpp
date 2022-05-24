@@ -2,6 +2,8 @@
 
 #include <util.cpp>
 
+#include "spec.h"
+
 Test util_spec() {
     return Test::create_test(
         "util.cpp",
