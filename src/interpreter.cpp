@@ -14,7 +14,7 @@ Result evaluate(std::string code, Memory memory, unsigned int start_index) {
         char symbol = code[i];
 
         if (symbol == '+') {
-            memory.entries[memory.pointer] ++;
+            memory.increment_value();
         } else if (symbol == '-') {
             memory.decrement_value();
         } else if (symbol == '>') {
