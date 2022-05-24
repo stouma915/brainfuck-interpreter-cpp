@@ -27,19 +27,19 @@ int search_loop_end(std::string code, int start_index) {
 
     int result = -1;
 
-    int a = 0;
-    int b = 0;
+    int x = 0;
+    int y = 0;
 
     for (unsigned int i = start_index; i < code.length(); i ++) {
         char symbol = code[i];
 
         if (symbol == '[') {
-            a ++;
+            x ++;
         } else if (symbol == ']') {
-            b ++;
+            y ++;
         }
 
-        if (a == b) {
+        if (x == y) {
             result = i;
             break;
         }
