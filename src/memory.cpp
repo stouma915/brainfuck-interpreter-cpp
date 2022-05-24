@@ -23,7 +23,7 @@ void Memory::decrement_value() {
 void Memory::set_value(int new_value) {
     entries[pointer] = 0;
 
-    for (int i = 1; i <= std::abs(new_value); i ++) {
+    for (int i = 0; i < std::abs(new_value); i ++) {
         if (new_value < 0) {
             decrement_value();
         } else if (new_value > 0) {
