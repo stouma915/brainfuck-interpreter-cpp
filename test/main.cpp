@@ -18,7 +18,8 @@ int main() {
     int failure = 0;
 
     for (unsigned int i = 0; i < tests.size(); i ++) {
-        TestResult result = (tests[i]).run();
+        Test test = tests[i];
+        TestResult result = test.run();
 
         success += result.success;
         failure += result.failure;
