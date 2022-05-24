@@ -5,7 +5,7 @@
 
 #include "util.h"
 
-Result evaluate(std::string code, Memory memory, int start_index) {
+Result evaluate(std::string code, Memory memory, unsigned int start_index) {
     using namespace std;
 
     stringstream result_stream;
