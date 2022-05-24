@@ -18,11 +18,10 @@ int main() {
     int failure = 0;
 
     for (unsigned int i = 0; i < tests.size(); i ++) {
-        Test test = tests[i];
+        Result result = tests[i].run();
 
-        auto [s, f] = test.run();
-        success += s;
-        failure += f;
+        success += result.success;
+        failure += result.failure;
     }
 
     cout << endl
