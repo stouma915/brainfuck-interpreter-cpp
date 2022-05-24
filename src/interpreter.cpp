@@ -3,7 +3,6 @@
 #include <regex>
 #include <sstream>
 
-#include "ascii_converter.h"
 #include "util.h"
 
 Result evaluate(std::string code, Memory memory, int start_index) {
