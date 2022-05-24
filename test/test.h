@@ -4,6 +4,8 @@
 #include <tuple>
 #include <vector>
 
+#include "result.h"
+
 class Test {
     public:
         typedef bool(*Func)();
@@ -22,7 +24,7 @@ class Test {
             failure = 0;
         }
 
-        std::tuple<int, int> run();
+        Result run();
 
         static Test create_test(std::string _name, std::vector<Func> _spec_vec) {
             return Test(
