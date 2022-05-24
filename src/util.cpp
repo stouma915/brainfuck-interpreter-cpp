@@ -27,7 +27,7 @@ int search_loop_end(std::string code, int start_index) {
 
     int result = -1;
 
-    int x, y = 0;
+    int x, y;
 
     for (unsigned int i = start_index; i < code.length(); i ++) {
         char symbol = code[i];
