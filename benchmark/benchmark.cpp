@@ -1,6 +1,5 @@
 #include "benchmark.h"
 
-#include <ascii_converter.cpp>
 #include <interpreter.cpp>
 #include <memory.cpp>
 #include <util.cpp>
