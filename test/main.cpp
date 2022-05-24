@@ -8,7 +8,6 @@
 #include "util_spec.h"
 
 const std::vector<Test> tests = {
-    ascii_converter_spec(),
     interpreter_spec(),
     util_spec()
 };
