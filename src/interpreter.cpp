@@ -23,7 +23,7 @@ Result evaluate(std::string code, Memory memory, int start_index) {
         } else if (symbol == '<') {
             memory.decrement();
         } else if (symbol == '.') {
-            result_stream << convert_ascii(memory.get_current_value());
+            result_stream << (char) emory.get_current_value();
         } else if (symbol == ',') {
             int input = 0;
 
