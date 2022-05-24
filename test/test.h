@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-#include "result.h"
+#include "test_result.h"
 
 class Test {
     public:
@@ -23,7 +23,7 @@ class Test {
             failure = 0;
         }
 
-        Result run();
+        TestResult run();
 
         static Test create_test(std::string _name, std::vector<Func> _spec_vec) {
             return Test(
