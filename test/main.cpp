@@ -3,7 +3,6 @@
 
 #include "test.h"
 
-#include "ascii_converter_spec.h"
 #include "interpreter_spec.h"
 #include "util_spec.h"
 
