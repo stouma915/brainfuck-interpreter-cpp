@@ -80,6 +80,6 @@ int main(int argc, char* argv[]) {
 
     string source = source_stream.str();
 
-    Result result = evaluate(source, Memory(), 0);
+    Result result = evaluate(source, Memory());
     cout << result.output << endl;
 }
