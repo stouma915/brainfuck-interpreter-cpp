@@ -31,11 +31,11 @@ int search_loop_end(std::string code, int start_index) {
     unsigned int y = 0;
 
     for (unsigned int i = start_index; i < code.length(); i ++) {
-        char symbol = code[i];
+        // char symbol = code[i];
 
-        if (symbol == '[') {
+        if (code[i] == '[') {
             x ++;
-        } else if (symbol == ']') {
+        } else if (code[i] == ']') {
             y ++;
         }
 
