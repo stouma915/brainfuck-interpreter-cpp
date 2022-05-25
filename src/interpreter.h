@@ -6,3 +6,4 @@
 #include "result.h"
 
 Result evaluate(std::string code, Memory memory, unsigned int start_index);
+Result evaluate(std::string code, Memory memory);
