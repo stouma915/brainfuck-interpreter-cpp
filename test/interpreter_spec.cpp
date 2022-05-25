@@ -16,21 +16,21 @@ Test interpreter_spec() {
                     "Result evaluate(string, Memory, unsigned int)",
                     "evaluate Brainf**k code",
                     "A"
-                ).test(evaluate("----[---->+<]>++.", Memory(), 0).output);
+                ).test(evaluate("----[---->+<]>++.", Memory()).output);
             },
             []() -> bool {
                 return Spec<std::string>::create_spec(
                     "Result evaluate(string, Memory, unsigned int)",
                     "evaluate Brainf**k code",
                     "ABCD"
-                ).test(evaluate("----[---->+<]>++.+.+.+.", Memory(), 0).output);
+                ).test(evaluate("----[---->+<]>++.+.+.+.", Memory()).output);
             },
             []() -> bool {
                 return Spec<std::string>::create_spec(
                     "Result evaluate(string, Memory, unsigned int)",
                     "evaluate Brainf**k code",
                     "!@#$"
-                ).test(evaluate("++++[->++++++++<]>+.-[->++<]>.[-->+<]>+++.+.", Memory(), 0).output);
+                ).test(evaluate("++++[->++++++++<]>+.-[->++<]>.[-->+<]>+++.+.", Memory()).output);
             }
         }
     );
