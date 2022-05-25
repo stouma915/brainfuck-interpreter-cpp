@@ -12,7 +12,7 @@ std::vector<long> benchmark(std::string code, int num_of_exec) {
     for (int i = 0; i < num_of_exec; i ++) {
         long start_time = current_epoch_milli();
 
-        evaluate(code, Memory(), 0);
+        evaluate(code, Memory());
 
         long finish_time = current_epoch_milli();
 
